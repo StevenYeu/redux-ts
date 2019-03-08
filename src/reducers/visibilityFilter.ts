@@ -1,13 +1,15 @@
-import { ISetVisibilityFilter, VisibiliterFilter } from './../actions/visibilityFilter';
-import { SET_VISIBILITY_FILTER } from './../constants/actionTypes';
+import { ISetVisibilityFilter, VisibiliterFilter } from '../actions/visibilityFilter';
+import { SET_VISIBILITY_FILTER } from '../constants/actionTypes';
+import { Reducer } from 'redux';
 
-const visibiilityFilter: (state: string, action: ISetVisibilityFilter) => string = (
+const visibiilityFilter: Reducer<string> = (
   state = VisibiliterFilter.SHOW_ALL,
   action
 ) => {
-  switch (action.type) {
+  let filterAction = action as ISetVisibilityFilter
+  switch (filterAction.type) {
     case SET_VISIBILITY_FILTER:
-      return action.filter;
+      return filterAction.filter;
     default:
       return state;
   }

@@ -1,6 +1,6 @@
 import { connect } from 'react-redux';
 import { Dispatch } from 'redux';
-import { AppState } from 'src/constants/state';
+import { AppState } from '../constants/state';
 import { ISetVisibilityFilter, setVisibilityFilter } from '../actions/visibilityFilter';
 import Link from '../components/Link';
 

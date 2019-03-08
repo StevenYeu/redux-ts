@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { ITodos } from 'src/constants/state';
+import { ITodos } from '../constants/state';
 import Todo from './Todo';
 
 export interface ITodoListProps {

@@ -1,8 +1,9 @@
-import { ITodos } from 'src/constants/state';
-import { IAddTodo, IToggleTodo, TodoAction } from './../actions/todo';
+import { ITodos } from '../constants/state';
+import { IAddTodo, IToggleTodo } from './../actions/todo';
 import { ADD_TODO, TOGGLE_TODO } from './../constants/actionTypes';
+import { Reducer } from 'redux';
 
-const todoReducer: (state: ITodos[], action: TodoAction) => ITodos[] = (state = [], action) => {
+const todoReducer: Reducer<ITodos[]> = (state = [], action) => {
   switch (action.type) {
     case ADD_TODO:
       const add = action as IAddTodo;
