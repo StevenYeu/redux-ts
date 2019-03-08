@@ -1,0 +1,1 @@
+Experimenting with React and Redux with TypeScript 
